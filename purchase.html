@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase - Aum Food</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>AUM FOOD INGREDIENTS</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="products.html">Products</a>
+        <a href="purchase.html">Purchase</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h2>Purchase Product</h2>
+</section>
+
+<section class="form-section">
+
+    <form onsubmit="return validateForm()">
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Mobile Number</label>
+        <input type="tel" id="mobile" placeholder="Enter mobile number">
+
+        <label>Select Product</label>
+
+        <select id="product">
+            <option value="">Select Product</option>
+            <option>White Chocolate Compound - ₹260/kg</option>
+            <option>Chocolate Slab - ₹165/kg</option>
+            <option> Chocolate milk - ₹150/kg</option>
+            <option>Milk Compound - ₹200/kg</option>
+        </select>
+
+        <label>Quantity</label>
+        <input type="number" id="quantity" min="1" placeholder="Enter quantity">
+
+        <label>Address</label>
+        <textarea id="address" placeholder="Enter your address"></textarea>
+
+        <button type="submit">Place Order</button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Aum Food Company</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
