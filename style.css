@@ -648,3 +648,26 @@ footer p {
         font-size: 16px;
     }
 }
+/* FINAL PURCHASE FORM FIX */
+
+.form-section form {
+    display: block !important;
+}
+
+.form-section label {
+    display: block !important;
+    width: 100% !important;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 15px 0 !important;
+}
+
+.form-section button {
+    display: block !important;
+    margin: 20px auto 0 !important;
+}
