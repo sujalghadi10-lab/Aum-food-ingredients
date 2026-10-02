@@ -16,7 +16,6 @@ body {
     color: #333;
     line-height: 1.6;
 
-    /* Footer bottom la thevnyasathi */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,10 +27,8 @@ body {
 header {
     background: #8b1e1e;
     color: white;
-    padding: 18px 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    padding: 12px 7%;
 
     position: sticky;
     top: 0;
@@ -40,20 +37,55 @@ header {
     box-shadow: 0 3px 15px rgba(0,0,0,0.2);
 }
 
-header h1 {
+/* TITLE + POSTER */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.brand h1 {
     font-size: 28px;
     letter-spacing: 2px;
 }
 
+/* HEADER POSTER */
+
+.header-poster {
+    width: 180px;
+    height: 65px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    border: 2px solid white;
+}
+
+/* NAVIGATION */
+
 nav {
     display: flex;
+
+    justify-content: center;
+
     gap: 25px;
+
+    margin-top: 10px;
+
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
     transition: 0.3s;
 }
 
@@ -106,18 +138,26 @@ nav a:hover {
 
 .btn {
     display: inline-block;
+
     padding: 13px 30px;
+
     background: #e88920;
     color: white;
+
     text-decoration: none;
+
     border-radius: 30px;
+
     font-weight: bold;
+
     transition: 0.3s;
 }
 
 .btn:hover {
     background: #ffad42;
+
     transform: translateY(-3px);
+
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
@@ -131,13 +171,17 @@ nav a:hover {
 
 .welcome h2 {
     color: #8b1e1e;
+
     font-size: 35px;
+
     margin-bottom: 20px;
 }
 
 .welcome p {
     max-width: 800px;
+
     margin: auto;
+
     font-size: 17px;
 }
 
@@ -146,15 +190,21 @@ nav a:hover {
 
 .highlights {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
+
     padding: 30px 8% 70px;
 }
 
 .box {
     background: white;
+
     padding: 35px 25px;
+
     text-align: center;
+
     border-radius: 15px;
 
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
@@ -168,7 +218,9 @@ nav a:hover {
 
 .box h3 {
     color: #8b1e1e;
+
     margin-bottom: 10px;
+
     font-size: 22px;
 }
 
@@ -183,7 +235,9 @@ nav a:hover {
     );
 
     color: white;
+
     text-align: center;
+
     padding: 70px 20px;
 }
 
@@ -196,10 +250,13 @@ nav a:hover {
 
 .about {
     display: flex;
+
     gap: 50px;
+
     align-items: center;
 
     max-width: 1150px;
+
     margin: auto;
 
     padding: 80px 30px;
@@ -207,6 +264,7 @@ nav a:hover {
 
 .about img {
     width: 48%;
+
     border-radius: 20px;
 
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -218,12 +276,15 @@ nav a:hover {
 
 .about h2 {
     color: #8b1e1e;
+
     font-size: 32px;
+
     margin-bottom: 20px;
 }
 
 .about h3 {
     color: #d56b19;
+
     margin-top: 15px;
 }
 
@@ -232,6 +293,7 @@ nav a:hover {
 
 .mission {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
     gap: 30px;
@@ -241,6 +303,7 @@ nav a:hover {
 
 .mission div {
     background: white;
+
     padding: 35px;
 
     text-align: center;
@@ -252,6 +315,7 @@ nav a:hover {
 
 .mission h2 {
     color: #8b1e1e;
+
     margin-bottom: 12px;
 }
 
@@ -260,6 +324,7 @@ nav a:hover {
 
 .gallery {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
@@ -269,6 +334,7 @@ nav a:hover {
 
 .gallery img {
     width: 100%;
+
     height: 260px;
 
     object-fit: cover;
@@ -377,7 +443,6 @@ footer {
 
     width: 100%;
 
-    /* Footer page chya bottom la */
     margin-top: auto;
 }
 
@@ -397,21 +462,33 @@ footer p {
     /* HEADER */
 
     header {
-        padding: 15px 20px;
-
-        flex-direction: column;
-
-        gap: 10px;
+        padding: 12px 15px;
     }
 
-    header h1 {
+    .header-content {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+    .brand h1 {
         font-size: 20px;
+
+        letter-spacing: 1px;
+    }
+
+    .header-poster {
+        width: 200px;
+
+        height: 65px;
     }
 
     nav {
-        gap: 15px;
+        gap: 12px;
 
-        flex-wrap: wrap;
+        margin-top: 10px;
 
         justify-content: center;
     }
@@ -529,6 +606,48 @@ footer p {
     }
 
 
+    /* PURCHASE */
+
+    .form-section {
+        margin: 30px 6%;
+
+        padding: 25px 20px;
+    }
+
+    .form-section label {
+        font-size: 17px;
+    }
+
+    .form-section input,
+    .form-section select,
+    .form-section textarea {
+        font-size: 16px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        margin: 30px 6%;
+
+        padding: 25px 20px;
+    }
+
+    .contact h2 {
+        font-size: 24px;
+
+        margin-bottom: 20px;
+    }
+
+    .contact p {
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        word-wrap: break-word;
+    }
+
+
     /* FOOTER */
 
     footer {
@@ -560,41 +679,70 @@ footer p {
         font-size: 11px;
     }
 
+    .header-poster {
+        width: 180px;
+
+        height: 60px;
+    }
+
 }
+
 
 /* ================= PURCHASE FORM ================= */
 
 .form-section {
     max-width: 700px;
+
     margin: 40px auto;
+
     padding: 30px;
+
     background: white;
+
     border-radius: 15px;
+
     box-shadow: 0 5px 20px rgba(0,0,0,0.10);
 }
 
 .form-section form {
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
 .form-section label {
+    display: block;
+
+    width: 100%;
+
     font-size: 18px;
+
     font-weight: bold;
+
     margin-top: 12px;
+
     margin-bottom: 6px;
+
     color: #333;
 }
 
 .form-section input,
 .form-section select,
 .form-section textarea {
+    display: block;
+
     width: 100%;
+
     padding: 12px;
+
     font-size: 16px;
+
+    margin: 0 0 15px 0;
+
     border: 1px solid #aaa;
+
     border-radius: 5px;
+
     outline: none;
+
     font-family: Arial, sans-serif;
 }
 
@@ -606,21 +754,29 @@ footer p {
 
 .form-section textarea {
     height: 100px;
+
     resize: vertical;
 }
 
 .form-section button {
+    display: block;
+
     width: 160px;
-    margin: 25px auto 0;
+
+    margin: 20px auto 0;
+
     padding: 12px;
 
     background: #8b1e1e;
+
     color: white;
 
     border: none;
+
     border-radius: 5px;
 
     font-size: 17px;
+
     cursor: pointer;
 }
 
@@ -629,57 +785,20 @@ footer p {
 }
 
 
-/* ================= PURCHASE MOBILE ================= */
-
-@media (max-width: 768px) {
-
-    .form-section {
-        margin: 30px 6%;
-        padding: 25px 20px;
-    }
-
-    .form-section label {
-        font-size: 17px;
-    }
-
-    .form-section input,
-    .form-section select,
-    .form-section textarea {
-        font-size: 16px;
-    }
-}
-/* FINAL PURCHASE FORM FIX */
-
-.form-section form {
-    display: block !important;
-}
-
-.form-section label {
-    display: block !important;
-    width: 100% !important;
-}
-
-.form-section input,
-.form-section select,
-.form-section textarea {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 0 15px 0 !important;
-}
-
-.form-section button {
-    display: block !important;
-    margin: 20px auto 0 !important;
-}
 /* ================= CONTACT PAGE ================= */
 
 .contact {
     max-width: 900px;
+
     margin: 40px auto;
+
     padding: 35px;
+
     background: white;
+
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
 }
 
 .contact div {
@@ -688,40 +807,24 @@ footer p {
 
 .contact h2 {
     color: #8b1e1e;
+
     font-size: 28px;
+
     margin-bottom: 25px;
+
     text-align: center;
 }
 
 .contact p {
     font-size: 17px;
+
     line-height: 1.7;
+
     margin-bottom: 18px;
+
     color: #333;
 }
 
 .contact p strong {
     color: #8b1e1e;
-}
-
-
-/* ================= CONTACT MOBILE ================= */
-
-@media (max-width: 768px) {
-
-    .contact {
-        margin: 30px 6%;
-        padding: 25px 20px;
-    }
-
-    .contact h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .contact p {
-        font-size: 16px;
-        line-height: 1.6;
-        word-wrap: break-word;
-    }
 }
