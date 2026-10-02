@@ -24,28 +24,18 @@ body {
 
 /* ================= HEADER ================= */
 
-header {
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.55)
-        ),
-        
-
-    background-size: cover;
-    background-position: center;
-
+ header {
+    background: #8b1e1e;
     color: white;
 
-    padding: 20px 7%;
+    padding: 12px 7%;
 
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
-}
-
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+ }
 /* TITLE */
 
 .header-content {
