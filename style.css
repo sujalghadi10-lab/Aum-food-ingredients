@@ -281,3 +281,28 @@ nav a:hover {
 .product h2 {
     color: #8b1e1e;
     margin: 
+/* ================= FOOTER ================= */
+
+footer {
+    background: #541010;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+    body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
