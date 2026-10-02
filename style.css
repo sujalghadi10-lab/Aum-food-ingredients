@@ -25,47 +25,46 @@ body {
 /* ================= HEADER ================= */
 
 header {
-    background: #8b1e1e;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("Poster.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
     color: white;
 
-    padding: 12px 7%;
+    padding: 20px 7%;
 
     position: sticky;
     top: 0;
     z-index: 1000;
 
-    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
 }
 
-/* TITLE + POSTER */
+/* TITLE */
 
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
-    gap: 25px;
+    text-align: center;
 }
 
 .brand h1 {
     font-size: 28px;
     letter-spacing: 2px;
+
+    text-shadow: 2px 2px 6px black;
 }
 
-/* HEADER POSTER */
 
-.header-poster {
-    width: 180px;
-    height: 65px;
-
-    object-fit: cover;
-
-    border-radius: 8px;
-
-    border: 2px solid white;
-}
-
-/* NAVIGATION */
+/* ================= NAVIGATION ================= */
 
 nav {
     display: flex;
@@ -74,7 +73,7 @@ nav {
 
     gap: 25px;
 
-    margin-top: 10px;
+    margin-top: 12px;
 
     flex-wrap: wrap;
 }
@@ -85,6 +84,8 @@ nav a {
     text-decoration: none;
 
     font-weight: bold;
+
+    text-shadow: 1px 1px 4px black;
 
     transition: 0.3s;
 }
@@ -104,7 +105,7 @@ nav a:hover {
             rgba(0,0,0,0.45),
             rgba(0,0,0,0.55)
         ),
-        url("images/company.jpg");
+        url("company.jpeg");
 
     background-size: cover;
     background-position: center;
@@ -462,14 +463,12 @@ footer p {
     /* HEADER */
 
     header {
-        padding: 12px 15px;
+        padding: 15px 15px;
+
+        background-position: center;
     }
 
     .header-content {
-        flex-direction: column;
-
-        gap: 8px;
-
         text-align: center;
     }
 
@@ -477,12 +476,8 @@ footer p {
         font-size: 20px;
 
         letter-spacing: 1px;
-    }
 
-    .header-poster {
-        width: 200px;
-
-        height: 65px;
+        text-shadow: 2px 2px 5px black;
     }
 
     nav {
@@ -495,6 +490,8 @@ footer p {
 
     nav a {
         font-size: 12px;
+
+        text-shadow: 1px 1px 3px black;
     }
 
 
@@ -677,12 +674,6 @@ footer p {
 
     nav a {
         font-size: 11px;
-    }
-
-    .header-poster {
-        width: 180px;
-
-        height: 60px;
     }
 
 }
