@@ -671,3 +671,57 @@ footer p {
     display: block !important;
     margin: 20px auto 0 !important;
 }
+/* ================= CONTACT PAGE ================= */
+
+.contact {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+.contact div {
+    width: 100%;
+}
+
+.contact h2 {
+    color: #8b1e1e;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+.contact p strong {
+    color: #8b1e1e;
+}
+
+
+/* ================= CONTACT MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .contact {
+        margin: 30px 6%;
+        padding: 25px 20px;
+    }
+
+    .contact h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .contact p {
+        font-size: 16px;
+        line-height: 1.6;
+        word-wrap: break-word;
+    }
+}
