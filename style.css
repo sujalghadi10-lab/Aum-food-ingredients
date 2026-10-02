@@ -561,3 +561,126 @@ footer p {
     }
 
 }
+/* ================= PURCHASE FORM ================= */
+
+.purchase-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+}
+
+.purchase-section h2 {
+    text-align: center;
+
+    color: #8b1e1e;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+#purchaseForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#purchaseForm label {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-top: 12px;
+    margin-bottom: 6px;
+
+    color: #333;
+}
+
+#purchaseForm input,
+#purchaseForm select,
+#purchaseForm textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    font-size: 16px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+}
+
+#purchaseForm input:focus,
+#purchaseForm select:focus,
+#purchaseForm textarea:focus {
+    border-color: #8b1e1e;
+}
+
+#purchaseForm textarea {
+    height: 100px;
+
+    resize: vertical;
+}
+
+#purchaseForm button {
+    width: 160px;
+
+    margin: 25px auto 0;
+
+    padding: 12px;
+
+    background: #8b1e1e;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#purchaseForm button:hover {
+    background: #b22222;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= PURCHASE MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .purchase-section {
+        margin: 30px 6%;
+
+        padding: 25px 20px;
+    }
+
+    .purchase-section h2 {
+        font-size: 26px;
+    }
+
+    #purchaseForm label {
+        font-size: 17px;
+    }
+
+    #purchaseForm input,
+    #purchaseForm select,
+    #purchaseForm textarea {
+        font-size: 16px;
+    }
+}
