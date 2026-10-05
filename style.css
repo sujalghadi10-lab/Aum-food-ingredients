@@ -218,27 +218,19 @@ nav a:hover {
 
 /* ================= PAGE TITLE ================= */
 
-.page-title {
-    min-height: 600px;
-
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.45),
-            rgba(0,0,0,0.55)
-        ),
-        url("about.jpeg");
-
-    color: white;
-
-    text-align: center;
-
-    padding: 70px 20px;
+.page-title{
+background: Linear-gradient(
+135deg,
+#8b1e1e,
+#c94b27
+);
+color: white;
+test-align: center;
+padding: 70px 20px;
 }
-
-.page-title h2 {
-    font-size: 42px;
+.page-title h2{
+font-size: 42px;
 }
-
 
 /* ================= ABOUT ================= */
 
