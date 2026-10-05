@@ -1,16 +1,20 @@
 /* =========================================
    AUM FOOD INGREDIENTS
-   JAVASCRIPT - PURCHASE FORM VALIDATION
+   JAVASCRIPT - PURCHASE FORM
+   GOOGLE SHEET ORDER SUBMISSION
    ========================================= */
+
+const scriptURL =
+"https://script.google.com/macros/s/AKfycby33H4NFmYYnf-Xz7QIrWM4ZEhJNMwmdYNfEEdU1KvZdahvqV7rLhbb7TEKZC1PJzsszg/exec";
 
 
 /* =========================================
-   PURCHASE FORM VALIDATION
+   PURCHASE FORM VALIDATION + SUBMISSION
    ========================================= */
 
 function validateForm() {
 
-    // Get values from form
+    // Get values
     let name = document.getElementById("name").value.trim();
     let mobile = document.getElementById("mobile").value.trim();
     let product = document.getElementById("product").value;
@@ -26,7 +30,6 @@ function validateForm() {
         return false;
     }
 
-    // Name should contain only letters and spaces
     if (!/^[A-Za-z ]+$/.test(name)) {
         alert("Please enter a valid name.");
         document.getElementById("name").focus();
@@ -42,7 +45,6 @@ function validateForm() {
         return false;
     }
 
-    // Indian mobile number - 10 digits starting from 6-9
     if (!/^[6-9][0-9]{9}$/.test(mobile)) {
         alert("Please enter a valid 10-digit mobile number.");
         document.getElementById("mobile").focus();
@@ -89,19 +91,58 @@ function validateForm() {
     }
 
 
-    // ================= SUCCESS =================
+    // ================= SEND TO GOOGLE SHEET =================
 
-    alert(
-        "Order placed successfully!\n\n" +
-        "Thank you for choosing Aum Food Ingredients."
-    );
+    let formData = new FormData();
 
-    return true;
+    formData.append("name", name);
+    formData.append("mobile", mobile);
+    formData.append("product", product);
+    formData.append("quantity", quantity);
+    formData.append("address", address);
+
+
+    alert("Placing your order...");
+
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
+    })
+    .then(function () {
+
+        alert(
+            "Order placed successfully! ✅\n\n" +
+            "Thank you for choosing Aum Food Ingredients."
+        );
+
+        document.getElementById("name").value = "";
+        document.getElementById("mobile").value = "";
+        document.getElementById("product").value = "";
+        document.getElementById("quantity").value = "";
+        document.getElementById("address").value = "";
+
+    })
+    .catch(function (error) {
+
+        console.error("Order Error:", error);
+
+        alert(
+            "Something went wrong ❌\n\n" +
+            "Please try again."
+        );
+
+    });
+
+
+    // Stop normal form submission
+    return false;
 }
 
 
 /* =========================================
-   WEBSITE LOADED MESSAGE
+   WEBSITE LOADED
    ========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
